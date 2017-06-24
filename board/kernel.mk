@@ -9,7 +9,7 @@ BOARD_KERNEL_CMDLINE += \
 	msm_rtb.filter=0x3F \
 	ehci-hcd.park=3 \
 	androidboot.bootdevice=7824900.sdhci \
-	androidboot.selinux=permissive
+	androidboot.selinux=enforcing
 
 BOARD_CUSTOM_BOOTIMG_MK := $(PLATFORM_PATH)/mkbootimg.mk
 BOARD_DTBTOOL_ARGS := -2
