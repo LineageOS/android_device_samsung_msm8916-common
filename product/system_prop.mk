@@ -97,6 +97,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.data.large_tcp_window_size=true \
 	sys.disable_ext_animation=1
 
+
+# OpenGLES Version
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.opengles.version=196610
+
 # Perf
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.vendor.extension_library=libqti-perfd-client.so
