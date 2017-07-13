@@ -67,6 +67,7 @@ bin/fmconfig
 bin/fm_qsoc_patches
 
 # GPS - From Crackling
+bin/loc_launcher
 -lib/libloc_api_v02.so|03860b5a4e72edd96c9acce3886b6d23
 -lib/libloc_ds_api.so|31c3c73f4e449eded83f32eabc561c29
 vendor/lib/hw/flp.default.so|48b1901aac6ce882c415dcbbffc36432
