@@ -275,6 +275,10 @@ on boot
     chown system system /sys/kernel/ipv4/tcp_rmem_max
     chown root radio /proc/cmdline
 
+# Vibrator
+    chmod 0644 /sys/class/timed_output/vibrator/pwm_value
+    chown system system /sys/class/timed_output/vibrator/pwm_value
+
 # Auto Brightness
 	chown system system  /sys/class/backlight/panel/auto_brightness
 	chmod 0660 /sys/class/backlight/panel/auto_brightness
