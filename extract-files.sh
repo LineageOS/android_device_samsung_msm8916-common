@@ -74,14 +74,13 @@ while [ "$1" != "" ]; do
                                 SETUP_DEVICE_COMMON_DIR=1
                                 SETUP_BOARD_COMMON_DIR=1
                                 ;;
-        -p | --path )           shift
-                                SRC=$1
+        -n | --no-cleanup )     CLEAN_VENDOR=false
                                 ;;
         -s | --section )        shift
                                 SECTION=$1
                                 CLEAN_VENDOR=false
                                 ;;
-        -n | --no-cleanup )     CLEAN_VENDOR=false
+        * )                     SRC="$1"
                                 ;;
         -h | --help )           print_help
                                 ;;
