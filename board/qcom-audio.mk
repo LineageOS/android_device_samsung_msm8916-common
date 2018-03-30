@@ -58,22 +58,21 @@ PRODUCT_COPY_FILES += \
     $(CONFIG_PATH)/msm8916_32/audio_policy.conf:system/etc/audio_policy.conf \
     $(CONFIG_PATH)/msm8916_32/audio_effects.conf:system/vendor/etc/audio_effects.conf \
     $(CONFIG_PATH)/msm8916_32/mixer_paths_mtp.xml:system/etc/mixer_paths_mtp.xml \
-    $(CONFIG_PATH)/msm8916_32/mixer_paths_sbc.xml:system/etc/mixer_paths_sbc.xml \
     $(CONFIG_PATH)/msm8916_32/mixer_paths_qrd_skuh.xml:system/etc/mixer_paths_qrd_skuh.xml \
     $(CONFIG_PATH)/msm8916_32/mixer_paths_qrd_skui.xml:system/etc/mixer_paths_qrd_skui.xml \
     $(CONFIG_PATH)/msm8916_32/mixer_paths_qrd_skuhf.xml:system/etc/mixer_paths_qrd_skuhf.xml \
     $(CONFIG_PATH)/msm8916_32/mixer_paths_wcd9306.xml:system/etc/mixer_paths_wcd9306.xml \
     $(CONFIG_PATH)/msm8916_32/mixer_paths_skuk.xml:system/etc/mixer_paths_skuk.xml \
-    $(CONFIG_PATH)/msm8916_32/mixer_paths_skul.xml:system/etc/mixer_paths_skul.xml \
     $(CONFIG_PATH)/msm8916_32/sound_trigger_mixer_paths.xml:system/etc/sound_trigger_mixer_paths.xml \
     $(CONFIG_PATH)/msm8916_32/sound_trigger_mixer_paths_wcd9306.xml:system/etc/sound_trigger_mixer_paths_wcd9306.xml \
     $(CONFIG_PATH)/msm8916_32/sound_trigger_platform_info.xml:system/etc/sound_trigger_platform_info.xml \
     $(CONFIG_PATH)/msm8916_32/mixer_paths_wcd9330.xml:system/etc/mixer_paths_wcd9330.xml
-
+#   $(CONFIG_PATH)/msm8916_32/mixer_paths_sbc.xml:system/etc/mixer_paths_sbc.xml \
+#   $(CONFIG_PATH)/msm8916_32/mixer_paths_skul.xml:system/etc/mixer_paths_skul.xml \
 ifeq ($(USE_QCOM_MIXER_PATHS), 1)
 PRODUCT_COPY_FILES += \
     $(CONFIG_PATH)/msm8916_32/mixer_paths.xml:system/etc/mixer_paths.xml
-endif
+
 
 #XML Audio configuration files
 ifeq ($(USE_XML_AUDIO_POLICY_CONF), 1)
