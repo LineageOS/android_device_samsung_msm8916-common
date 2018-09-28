@@ -119,9 +119,7 @@ void set_target_properties(const char *ro_build_id, const char *bootloader_str, 
 		const char *device, const char *model, int network_type, const char *operator_alpha,
 		const char *operator_numeric, const char *ver_release)
 {
-	char description[PROP_VALUE_MAX];
 	char display_id[PROP_VALUE_MAX];
-	char fingerprint[PROP_VALUE_MAX];
 
 	char *bootloader = (char *)bootloader_str;
 	char *build_id = (char *)ro_build_id;
@@ -137,21 +135,12 @@ void set_target_properties(const char *ro_build_id, const char *bootloader_str, 
 		version_release = (char *)property_get("ro.build.version.release").c_str();
 
 	/* initialise the buffers */
-	memset(description, 0, PROP_VALUE_MAX);
 	memset(display_id, 0, PROP_VALUE_MAX);
-	memset(fingerprint, 0, PROP_VALUE_MAX);
 
-	snprintf(description, PROP_VALUE_MAX, "%s-user %s %s %s release-keys",
-			name, version_release, build_id, bootloader);
 	snprintf(display_id, PROP_VALUE_MAX, "%s release-keys", build_id);
-	snprintf(fingerprint, PROP_VALUE_MAX, "samsung/%s/%s:%s/%s/%s:user/release-keys",
-			name, device, version_release, build_id, bootloader);
 
 	/* set the build properties */
-	property_override("ro.bootimage.build.fingerprint", fingerprint);
-	property_override("ro.build.description", description);
 	property_override("ro.build.display.id", display_id);
-	property_override("ro.build.fingerprint", fingerprint);
 	property_override("ro.build.product", device);
 	property_override("ro.product.device", device);
 	property_override("ro.product.model", model);
